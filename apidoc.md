@@ -1,6 +1,7 @@
 # Portfolio API Documentation
 
 This API allows for the management of portfolios for people worldwide. 
+This documents is to guide the developers when updating the frontend
 
 ## Endpoints
 
