@@ -1,5 +1,9 @@
 from django.db import models
+import random
+import string
 
+
+generate_random_string = lambda: ''.join(random.choices(string.ascii_letters + string.digits, k=20))
 class Tags(models.Model):
 
     name = models.CharField(max_length=255)
@@ -38,3 +42,12 @@ class Portfolio(models.Model):
     def __str__(self):
 
         return f"{self.name} from {self.country}."
+    
+    def can_edit(self,key):
+
+        return self.key == self.modification_key
+
+    def save(self,*args,**kwargs):
+
+        self.modification_key = generate_random_string()
+        super(Portfolio,self).save(*args,**kwargs)
