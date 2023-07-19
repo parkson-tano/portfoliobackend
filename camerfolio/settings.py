@@ -1,6 +1,6 @@
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -69,11 +69,11 @@ DATABASES = {
     # }
     'default': {
     'ENGINE': 'django.db.backends.postgresql',
-    'NAME': 'neondb',
-    'USER': 'asbilim',
-    'PASSWORD': 'd8MziEN4qCLf',
-    'HOST': 'ep-super-snow-812319.us-east-2.aws.neon.tech',
-    'PORT': '5432',
+    'NAME': os.environ.get('CAMEROON_PORTFOLIO_DB_NAME'),
+    'USER': os.environ.get('CAMEROON_PORTFOLIO_DB_USER'),
+    'PASSWORD': os.environ.get('CAMEROON_PORTFOLIO_DB_PASSWORD'),
+    'HOST': os.environ.get('CAMEROON_PORTFOLIO_DB_HOST'),
+    'PORT': os.environ.get('CAMEROON_PORTFOLIO_DB_PORT'),
   }
 }
 
