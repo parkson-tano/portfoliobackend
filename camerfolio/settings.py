@@ -46,6 +46,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+#cors configured
+
 ROOT_URLCONF = 'camerfolio.urls'
 
 TEMPLATES = [
