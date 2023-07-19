@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import Country,Portfolio,Socials,Tags
 
-# Register your models here.
+for item in [Country,Portfolio,Socials,Tags]:
+
+    admin.site.register(item)

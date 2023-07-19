@@ -32,6 +32,7 @@ To get started with the Cameroon Portfolio project, follow these steps:
     ```batch
         python -m venv venv           rem to create the virtualenvironment
         venv\Scripts\activate         rem to activate the virtualenvironment
+        pip install -r requirements.txt rem to install all the dependencies
         python manage.py runserver    rem to start the server in development mode
     ```
 
